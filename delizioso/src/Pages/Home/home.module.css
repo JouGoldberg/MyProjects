@@ -1,0 +1,188 @@
+:root {
+    --primary: #311F09;
+    --secondary: #FF8A00;
+    --tertiary: #3FA72F
+}
+
+.home {
+    margin-top: 100px;
+}
+
+.restaurant {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.restaurantHeading {
+    width: min-content;
+    color: var(--secondary);
+    background-color: rgb(255, 138, 0, 0.1);
+    border-radius: 30px;
+    padding: 10px 28px;
+    font-family: 'raleway', sans-serif;
+    font-size: 18px;
+}
+
+.restaurantTitle {
+    margin-block: 20px;
+    color: var(--primary);
+    font-family: 'raleway', sans-serif;
+    font-size: 85px;
+    font-weight: 700;
+}
+
+.restaurantInfo {
+    color: #5C4529;
+    font-size: 20px;
+    font-family: 'poppins', sans-serif;
+}
+
+.restaurantButtons {
+    margin-top: 55px;
+    display: flex;
+    gap: 15px;
+}
+
+.restaurantButtons button {
+    color: white;
+    width: 190px;
+    padding-block: 16px;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.restaurantOrder {
+    border: 1px solid var(--secondary);
+    background-color: var(--secondary);
+}
+
+.restaurantReservation {
+    border: 1px solid var(--tertiary);
+    background-color: var(--tertiary);
+}
+
+.restaurantOrder:hover {
+    background-color: #ca6d04;
+    border: 1px solid #ca6d04;
+}
+
+.restaurantReservation:hover {
+    border: 1px solid #338b25;
+    background-color: #338b25;
+}
+
+.restaurantLeft {
+    width: 50%;
+}
+
+.restaurantRight {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.vegetable1 {
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-12%, -12%);
+}
+
+.vegetable2 {
+    width: 35%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: rotate(160deg);
+    translate: 10% 10%;
+}
+
+.restaurantSpaghettiImg {
+    width: 90%;
+    z-index: 1;
+    filter: drop-shadow(-5px 10px 25px rgba(79, 79, 79, 0.2));
+}
+
+/* ----------> Welcome to Delizioso  <----------*/
+
+.welcomeDelizioso {
+    margin-top: 120px;
+    padding-block: 75px;
+    background-color: rgb(63, 198, 110, 0.1);
+}
+
+.insideWelcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.welcomeLeft {
+    width: 51%;
+    position: relative;
+}
+.leaf1 ,
+.leaf2 {
+    position: absolute;
+    z-index: 1;
+}
+.leaf1 {
+    top: 60%;
+    transform: rotate(120deg);
+    width: 150px;
+}
+
+.leaf2 {
+    right: 35px;
+    top: 90px;
+    transform: rotate(250deg);
+}
+
+.welcomeRight {
+    width: 42%;
+}
+
+.saladImg {
+    width: 100%;
+    filter: drop-shadow(20px 20px 20px rgba(79, 79, 79, 0.2));
+}
+
+.welcomeTitle {
+    color: var(--primary);
+    font-size: 80px;
+    font-family: 'tinos';
+    font-weight: 700;
+}
+
+.orange {
+    color: var(--secondary);
+}
+
+.welcomeInfo {
+    color: #5C4529;
+    margin-block:20px ;
+    font-size: 20px;
+    font-family: 'poppins';
+}
+
+.welcomeBtn {
+    margin-top: 30px;
+    color: white;
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary);
+    width: 190px;
+    padding-block: 16px;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 200ms;
+}
+.welcomeBtn:hover {
+    background-color: #ca6d04;
+    border: 1px solid #ca6d04;
+}
