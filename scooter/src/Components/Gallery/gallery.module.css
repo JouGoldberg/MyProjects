@@ -1,0 +1,107 @@
+.gallery{
+    margin-top: clamp(15px,6vw,90px);
+}
+
+.galleryMain {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.galleryCard {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.galleryImg {
+    width: 100%;
+}
+
+.galleryInfo {
+    color: var(--primary);
+    font-family: 'poppins';
+    font-weight: 600;
+    position: absolute;
+    top: 12px;
+    left: 15px;
+}
+
+.galleryBtn {
+    display: flex;
+    flex-direction: column;
+}
+
+.galleryBtn p {
+    width: 65%;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: var(--primary);
+    border: 3px solid var(--primary);
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+
+@media(min-width:750px) {
+    .galleryCard {
+        height: clamp(50px, 31vw, 720px);
+    }
+
+    .galleryBtn p {
+        width: 68%;
+        margin-block: clamp(5px, calc(1vw - 5px), 20px);
+        padding: clamp(10px, calc(1vw + 6px), 35px) clamp(10px, 4vw, 95px);
+        font-size: clamp(8px, calc(2vw + 4px), 50px);
+    }
+
+    .galleryCard:first-child {
+        transform: translateY(clamp(30px, 8vw, 120px));
+    }
+
+    .galleryBtn {
+        transform: translateY(clamp(30px, 8vw, 120px));
+    }
+
+    .galleryInfo {
+        font-size: clamp(5px, calc(2vw + 3px), 60px);
+    }
+
+    .galleryMain {
+        margin-top: clamp(15px , 4vw , 75px);
+        gap: clamp(15px, 4vw, 45px);
+    }
+}
+
+
+@media(max-width:750px) {
+    .galleryMain {
+        margin-top: clamp(15px , 6vw , 55px);
+        grid-template-columns: 1fr;
+        gap: 4vw;
+    }
+
+    .galleryCard:first-child {
+        transform: translateY(0px);
+    }
+
+    .galleryBtn {
+        transform: translateY(0px);
+    }
+
+    .galleryBtn p {
+        width: 68%;
+        margin-block: clamp(3px, calc(1vw - 2px), 20px);
+        padding: clamp(6px, calc(1vw + 10px), 35px) clamp(10px, 4vw, 95px);
+        font-size: clamp(12px, calc(2vw + 6px), 50px);
+    }
+
+    .galleryInfo {
+        font-size: clamp(5px, 5vw, 60px);
+    }
+}
+@media(max-width:450px){
+    .galleryBtn p{
+        border: 2px solid var(--primary);
+    }
+}

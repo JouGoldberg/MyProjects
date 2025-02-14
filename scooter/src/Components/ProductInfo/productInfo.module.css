@@ -1,0 +1,79 @@
+:root {
+    --primary : #42454A
+}
+
+.product_info{
+    margin-top: clamp(45px,6vw,100px);
+}
+.main {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    width: 50%;
+}
+.left img {
+    width: 100%;
+}
+
+.right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.rightInfo {
+    color: var(--primary);
+    font-weight: 400;
+    font-family: 'roboto';
+}
+
+.rightInfoCard {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.rightDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+@media(max-width:750px){
+    .main{
+        flex-direction: column;
+    }
+    .left,
+    .right{
+        width: 100%;
+    }
+    .right{
+        justify-content: start;
+    }
+    .rightInfo{
+        font-size: clamp(11px,calc(3vw + 2px),30px);
+    }
+    .rightInfoCard{
+        margin-block: clamp(2px,calc(1vw + 2px),25px);
+        gap: 6px;
+    }
+    .rightInfoCard img{
+        width: clamp(12px ,calc(8vw - 2px) , 60px) ;
+        height: clamp(12px ,calc(8vw - 2px) , 60px);
+    }
+}
+
+@media(min-width : 750px){
+    .rightInfo{
+        font-size: clamp(13px,calc(2vw - 8px),30px);
+    }
+    .rightInfoCard{
+        margin-block: clamp(5px,calc(1vw - 3px),25px);
+    }
+    .rightInfoCard img{
+        width: clamp(12px ,calc(3vw + 4px) , 63px) ;
+        height: clamp(12px ,calc(3vw + 4px) , 63px);
+    }
+}

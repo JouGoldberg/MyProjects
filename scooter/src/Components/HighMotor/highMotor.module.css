@@ -1,0 +1,7 @@
+.motorImg {
+    width: 100%;
+}
+
+.high_Motor {
+    margin-top: clamp(35px,4vw,100px);
+}

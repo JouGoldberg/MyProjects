@@ -1,0 +1,82 @@
+:root{
+    --primary:#42454A
+}
+.subscribe{
+    margin-top: clamp(70px,3vw,55px);
+}
+.subscribeForm {
+    margin-top: clamp(20px,4vw,50px);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscribeForm input {
+    font-family: 'montserrat';
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 6px;
+    outline: none;
+    transition: 250ms;
+}
+
+.subscribeForm input[type="email"] {
+    width: 47%;
+    color: var(--primary);
+    background-color: #FAFAFA;
+    padding: clamp(3px,3vw,20px) clamp(9px,calc(1vw + 6px),20px);
+    border: 1px solid #f5f5f5;
+}
+.subscribeForm input[type="submit"] {
+    color: white;
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: clamp(3px,3vw,20px) clamp(4px , 2vw ,35px);
+    cursor: pointer;
+}
+.subscribeForm input[type="email"]:focus {
+    border: 1px solid #bcbcbc;
+} 
+
+.subscribeForm input[type='submit']:hover , .subscribeForm input[type='submit']:active {
+    background-color: #37383a;
+}
+.submitBtn:hover , .submitBtn:active{
+    background-color: #37383a;
+}
+.submitBtn{
+    color: white;
+    background-color: var(--primary);
+    padding: clamp(3px ,3vw,20px) 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: none;
+    transition: 250ms;
+    font-size: 16px;
+}
+
+@media(max-width:600px) {
+    .subscribeForm{
+        gap: 5px;
+    }
+    .subscribeForm input[type='submit']{
+        display: none;
+    }
+    .subscribeForm input[type='email']{
+        font-size: 14px;
+    }
+    .submitBtn{
+        display: block;
+        font-size: 14px;
+    }
+}
+@media(max-width:400px) {
+    .subscribeForm input[type='email']{
+        font-size: 12px;
+    }
+    .submitBtn{
+        display: block;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,269 @@
+:root {
+    --primary: #42454A;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headH1 {
+    color: var(--primary);
+    font-family: 'poppins';
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+.theFuture {
+    font-weight: 600;
+    display: block;
+    transform: translateY(-20px);
+}
+
+.headHr {
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+}
+
+.info {
+    color: var(--primary);
+    font-family: 'poppins';
+}
+
+.leftFoot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buyIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.buyIcon:hover {
+    background-color: #353636;
+}
+
+.buyNow {
+    color: #212121;
+    font-family: 'poppins';
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.watchVideo {
+    color: var(--primary);
+    font-family: 'poppins';
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.rightImg {
+    width: 100%;
+}
+
+.positionRev {
+    width: 100%;
+    max-width: 2000px;
+    margin: auto;
+    position: relative;
+}
+
+.scooterBg {
+    background-color: #ddddde;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.scooterInfo_Cards {
+    margin-top: clamp(30px, 5vw, 70px);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.scooterInfo_Cards .card {
+    color: var(--primary);
+    padding-block: 22px;
+    border: 1px solid #F4F4F4;
+    border-radius: 6px;
+    box-shadow: 0px 2px 15px 1px rgb(236, 236, 236);
+    text-align: center;
+    font-family: 'poppins';
+    white-space: nowrap;
+}
+
+.lbs {
+    font-size: 22px;
+}
+
+.cardInfo {
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.cardNumber {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+
+@media(min-width:1000px) {
+    .headH1 {
+        font-size: clamp(50px, calc(7vw - 7px), 130px);
+    }
+
+    .headHr {
+        width: 55%;
+        margin-top: clamp(5px, calc(1vw + 5px), 40px);
+    }
+
+    .info {
+        font-size: clamp(16px, calc(2vw - 8px), 30px);
+        margin-top: clamp(5px, 2vw, 40px);
+    }
+
+    .buyIcon {
+        font-size: clamp(14px, calc(2vw - 1px), 28px);
+        width: clamp(10px,calc(3vw - 2px),60px);
+        height: clamp(10px,calc(3vw - 2px),60px);
+    }
+
+    .buyNow {
+        font-size: clamp(15px, calc(1vw + 4px), 25px);
+    }
+
+    .watchVideo {
+        font-size: clamp(13px, calc(1vw + 2px), 25px);
+    }
+
+    .watchVideoImg {
+        width: clamp(50px, calc(6vw - 7px), 125px);
+        height: clamp(50px, calc(6vw - 7px), 125px);
+    }
+
+    .leftFoot {
+        width: 90%;
+        margin-top: clamp(10px, calc(2vw - 15px), 50px);
+    }
+
+    .part {
+        gap: clamp(5px, calc(2vw - 8px), 40px);
+    }
+
+    .scooterBg {
+        width: clamp(200px, calc(36vw - 10px), 700px);
+        height: clamp(200px, 37vw, 700px);
+    }
+
+    .left {
+        width: 40%;
+    }
+
+    .right {
+        width: 59%;
+    }
+
+}
+
+
+@media(max-width:1000px) {
+    .header {
+        margin-top: 6vw;
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    .right {
+        margin-top: 3vw;
+    }
+
+    .headH1 {
+        font-size: clamp(40px, 12vw, 150px);
+    }
+
+    .headHr {
+        width: 42%;
+        margin-top: clamp(5px, 2vw, 40px);
+    }
+
+    .info {
+        font-size: calc(3vw + 1px);
+        margin-top: calc(3vw + 7px);
+    }
+
+    .leftFoot {
+        margin-top: calc(2vw + 10px);
+    }
+
+    .part {
+        gap: clamp(13px, calc(4vw - 5px), 50px);
+    }
+
+    .buyIcon {
+        font-size: clamp(10px, calc(3vw + 3px), 40px);
+        width: calc(6vw + 5px);
+        height:calc(6vw + 5px) ;
+    }
+
+    .buyNow {
+        font-size: clamp(13px,3vw,50px);
+    }
+
+    .watchVideo {
+        font-size: clamp(12px,3vw,50px);
+    }
+
+    .watchVideoImg {
+        width: calc(13vw + 5px);
+        height: calc(13vw + 5px);
+    }
+
+    .scooterBg {
+        width: 52vw;
+        height: 58vw;
+    }
+}
+
+
+
+@media(max-width:1250px) {
+    .scooterInfo_Cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media(max-width:700px) {
+    .scooterInfo_Cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:400px) {
+    .scooterInfo_Cards {
+        grid-template-columns: 1fr;
+    }
+}

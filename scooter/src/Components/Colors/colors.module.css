@@ -1,0 +1,102 @@
+:root {
+    --primary: #42454A;
+}
+.colors{
+    margin-top: clamp(15px,5vw ,80px);
+}
+.colorsMain {
+    margin-top: clamp(30px,4vw , 70px);
+    display: flex;
+    justify-content: center;
+}
+
+.colorsMainImg {
+    width: 100%;
+    max-width: 2000px;
+}
+
+.colorsCards {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.colorsCard {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.colorsScooterImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.colorsScooterNum {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+    opacity: 0.6;
+    position: absolute;
+    right: 12px;
+    bottom: 2px;
+}
+
+@media(max-width:1150px){
+    .colorsCards {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .colorsCard{
+        width: 100%;
+        height: 280px;
+    }
+    .colorsScooterNum{
+        font-size: clamp(100px,9vw,150px);
+    }
+    .colorsCards{
+        transform: translateY(-15vw);
+    }
+}
+@media(max-width:700px){
+    .colorsCard{
+        width: 100%;
+        height: 210px;
+    }
+    .colorsScooterNum{
+        font-size: clamp(70px,9vw,150px);
+    }
+    .colorsCards{
+        transform: translateY(-18vw);
+    }
+}
+@media(max-width:550px){
+    .colorsCards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .colorsCard{
+        width: 100%;
+        height: 54vw;
+    }
+    .colorsScooterNum{
+        font-size: clamp(30px,20vw,90px);
+    }
+    .colorsCards{
+        transform: translateY(-25vw);
+    }
+}
+
+@media(min-width:1150px){
+    .colorsCard{
+        width:clamp(50px,19vw,400px) ;
+        height:clamp(50px,19vw,400px) ;
+    }
+    .colorsScooterNum{
+        font-size: clamp(20px,6vw,150px);
+    }
+    .colorsCards{
+        transform: translateY(-150px);
+    }
+}
