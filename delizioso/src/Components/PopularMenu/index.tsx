@@ -18,7 +18,7 @@ const PopularMenu = (props: IProps) => {
         return Object.values(popularMenu).flat().sort((a, b) => a.name.charCodeAt() - b.name.charCodeAt())
     }, [])
 
-    const menuItem: string = searchParams.get('menuItem') || 'allCategory'
+    const menuItem: string = searchParams.get('menuItem') || 'dinner'
 
     const handleMenuItem = (item: string): void => {
         const newMenuItem = item.toLowerCase() == 'all category' ? 'allCategory' : item.toLowerCase()
@@ -32,7 +32,7 @@ const PopularMenu = (props: IProps) => {
     const startMenuItem: number = activeMenuPage * showMenuItem - showMenuItem
     const endMenuItem: number = activeMenuPage * showMenuItem
 
-    const showMenu: IMenuItem[] | null = menuItem == 'allCategory' ? allCategory : popularMenu[menuItem] || null
+    const showMenu: IMenuItem[] | null = menuItem == 'allCategory' ? allCategory : popularMenu[menuItem as keyof typeof popularMenu] || null
 
     const panigation: null | number = useMemo(() => {
         const totalLength: null | number = showMenu && Math.ceil(showMenu.length / showMenuItem)
@@ -64,7 +64,7 @@ const PopularMenu = (props: IProps) => {
                                     </div>
                                 </div>
                             }) :
-                            <p className={styles.menuNotItem}>Not Item</p>
+                            <div></div>
                     }
                 </div>
 

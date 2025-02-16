@@ -13,3 +13,9 @@ export interface IPopularMenu {
     dessert: TMenuItem;
     drink: TMenuItem;
 }
+
+export interface Ichef {
+    name: string,
+    image: string,
+    job: string
+}

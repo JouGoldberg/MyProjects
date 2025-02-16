@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './home.module.css'
 import PopularMenu from '../../Components/PopularMenu'
+import { chef } from '../../Data'
 
 
 const Home = () => {
@@ -42,8 +43,46 @@ const Home = () => {
         </div>
       </div>
 
-      <PopularMenu title="Our popular menu"/>
+      <PopularMenu title="Our popular menu" />
 
+      <div className={styles.reserveTable}>
+        <div className={styles.insideReserve}>
+          <div className={styles.reserveLeft}>
+            <div className={styles.insideLeft}>
+              <img loading='lazy' className={styles.leftImg} src="/reserveImg.jpg" alt="Reserve_Image" />
+            </div>
+            <div className={`${styles.reserveAbsolute} ${styles.reserveAbsolute1}`}>
+              <img src="/reserveImg1.jpg" alt="Reserve_Image" />
+            </div>
+            <div className={`${styles.reserveAbsolute} ${styles.reserveAbsolute2}`}>
+              <img src="/reserveImg2.jpg" alt="Reserve_Image" />
+            </div>
+          </div>
+          <div className={styles.reserveRight}>
+            <h2 className={styles.reerveTitle}>Let's reserve<br /> <span className={styles.orange}>a table</span></h2>
+            <p className={styles.reserveInfo}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis ultricies at eleifend proin. Congue nibh nulla malesuada ultricies nec quam </p>
+            <button className={styles.reserveBtn}>Reservation</button>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.chef}>
+        <div className="container">
+          <h2 className={styles.chefTitle}>Our greatest chef</h2>
+
+          <div className={styles.cooks}>
+            {
+              chef.map(({ image, name, job }, i) => {
+                return <div className={styles.chefCard} key={i}>
+                  <img className={styles.chefImage} src={image} alt="Chef" />
+                  <p className={styles.chefName}>{name}</p>
+                  <p className={styles.chefJob}>{job}</p>
+                </div>
+              })
+            }
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

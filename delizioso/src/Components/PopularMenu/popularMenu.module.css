@@ -5,8 +5,7 @@
 }
 
 .popularMenu {
-    margin-top: 120px;
-    margin-bottom: 200px;
+    margin-top: 100px;
 }
 
 .title {
@@ -68,7 +67,7 @@
 }
 
 .menuCard {
-    padding-block: 30px 40px;
+    padding-block: 30px 35px;
     padding-inline: 35px;
     background-color: rgba(208, 204, 199, 0.1);
     border-radius: 70px;
@@ -79,14 +78,14 @@
 
 .cardImage {
     width: 100%;
-    height: 270px;
+    height: 250px;
     object-fit: contain;
     filter: contrast(110%);
 }
 
 .cardName {
     color: #342717;
-    margin-top: 20px;
+    margin-top: 23px;
     font-size: 30px;
     font-weight: 600;
     font-family: 'poppins';
@@ -133,25 +132,26 @@
 }
 
 .panigation {
-    margin-top: 80px;
+    margin-top: 75px;
     display: flex;
     justify-content: center;
 }
 
 .insidePanigation {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
 }
 
 .navBtn {
+    margin-inline: 2px;
     width: 47px;
     height: 47px;
     padding-bottom: 2px;
     color: white;
     background-color: var(--primary);
     border: 1px solid var(--primary);
-    border-radius: 10px;
+    border-radius: 13px;
     cursor: pointer;
     font-size: 24px;
     display: flex;
@@ -164,7 +164,7 @@
     color: var(--secondary);
     background-color: rgb(255, 138, 0, 0.1);
     border: 1px solid rgb(255, 138, 0, 0);
-    border-radius: 10px;
+    border-radius: 13px;
     width: 47px;
     height: 47px;
     font-family: 'poppins';
