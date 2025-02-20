@@ -19,9 +19,9 @@ const Home = () => {
             </div>
           </div>
           <div className={styles.restaurantRight}>
-            <img loading='lazy' className={styles.vegetable1} src='/restaurantVegetable.png' alt="Vegetable" />
-            <img loading='lazy' className={styles.vegetable2} src='/restaurantVegetable.png' alt="Vegetable" />
-            <img loading='lazy' className={styles.restaurantSpaghettiImg} src='/restaurantSpaghetti.png' alt="Spaghetti" />
+            <img className={styles.vegetable1} src='/restaurantVegetable.png' alt="Vegetable" />
+            <img className={styles.vegetable2} src='/restaurantVegetable.png' alt="Vegetable" />
+            <img className={styles.restaurantSpaghettiImg} src='/restaurantSpaghetti.png' alt="Spaghetti" />
           </div>
         </div>
       </div>
@@ -30,9 +30,9 @@ const Home = () => {
         <div className="container">
           <div className={styles.insideWelcome}>
             <div className={styles.welcomeLeft}>
-              <img loading='lazy' className={styles.leaf1} src='/leaf1.svg' alt="Leaf" />
-              <img loading='lazy' className={styles.leaf2} src='/leaf1.svg' alt="Leaf" />
-              <img loading='lazy' className={styles.saladImg} src='/salad.png' alt="Salad" />
+              <img className={styles.leaf1} src='/leaf1.svg' alt="Leaf" />
+              <img className={styles.leaf2} src='/leaf1.svg' alt="Leaf" />
+              <img className={styles.saladImg} src='/salad.png' alt="Salad" />
             </div>
             <div className={styles.welcomeRight}>
               <h2 className={styles.welcomeTitle}>Welcome to <br /> <span className={styles.orange}>delizioso</span></h2>
@@ -49,7 +49,7 @@ const Home = () => {
         <div className={styles.insideReserve}>
           <div className={styles.reserveLeft}>
             <div className={styles.insideLeft}>
-              <img loading='lazy' className={styles.leftImg} src="/reserveImg.jpg" alt="Reserve_Image" />
+              <img className={styles.leftImg} src="/reserveImg.jpg" alt="Reserve_Image" />
             </div>
             <div className={`${styles.reserveAbsolute} ${styles.reserveAbsolute1}`}>
               <img src="/reserveImg1.jpg" alt="Reserve_Image" />
@@ -81,6 +81,13 @@ const Home = () => {
               })
             }
           </div>
+          <button className={styles.chefBtn}>View all</button>
+        </div>
+      </div>
+
+      <div className='container'>
+        <div className={styles.weAreOpen}>
+
         </div>
       </div>
     </div>

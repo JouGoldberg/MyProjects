@@ -1,8 +1,9 @@
 import React, { useMemo, useState } from 'react'
 import styles from './popularMenu.module.css'
 import { popularMenu } from '../../Data'
-import { useNavigate, useSearchParams } from 'react-router-dom'
+import { useLocation, useSearchParams } from 'react-router-dom'
 import { IMenuItem } from '../../Interfaces'
+
 
 interface IProps {
     title: string
@@ -11,8 +12,8 @@ interface IProps {
 const PopularMenu = (props: IProps) => {
     const menuTabs: string[] = ['All category', 'Dinner', 'Lunch', 'Dessert', 'Drink']
 
-    const navigate = useNavigate()
-    const [searchParams] = useSearchParams()
+    const location = useLocation()
+    const [searchParams,setSearchParams] = useSearchParams()
 
     const allCategory: IMenuItem[] = useMemo(() => {
         return Object.values(popularMenu).flat().sort((a, b) => a.name.charCodeAt() - b.name.charCodeAt())
@@ -22,7 +23,7 @@ const PopularMenu = (props: IProps) => {
 
     const handleMenuItem = (item: string): void => {
         const newMenuItem = item.toLowerCase() == 'all category' ? 'allCategory' : item.toLowerCase()
-        navigate(`?menuItem=${newMenuItem}`)
+        setSearchParams({menuItem : newMenuItem}) 
         setActiveMenuPage(1)
     }
 
@@ -38,9 +39,11 @@ const PopularMenu = (props: IProps) => {
         const totalLength: null | number = showMenu && Math.ceil(showMenu.length / showMenuItem)
         return totalLength
     }, [showMenu])
+    
+    const marginTop = location.pathname == '/menu' ? '60px' : '80px'
 
     return (
-        <div className={styles.popularMenu}>
+        <div style={{marginTop:marginTop}} className={styles.popularMenu}>
             <div className="container">
                 <h2 className={styles.title}>{props.title}</h2>
                 <div className={styles.menuTabs}>
@@ -55,7 +58,7 @@ const PopularMenu = (props: IProps) => {
                         showMenu ?
                             showMenu.slice(startMenuItem, endMenuItem).map(({name,image,desc,price}, i) => {
                                 return <div className={styles.menuCard} key={i}>
-                                    <img className={styles.cardImage} src={image} loading='lazy' />
+                                    <img className={styles.cardImage} src={image} />
                                     <p className={styles.cardName}>{name}</p>
                                     <p className={styles.cardDesc}>{desc}</p>
                                     <div className={styles.cardFoot}>

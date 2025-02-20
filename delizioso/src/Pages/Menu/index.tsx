@@ -1,8 +1,11 @@
 import React from 'react'
+import PopularMenu from '../../Components/PopularMenu'
 
 const Menu = () => {
   return (
-    <div>Menu</div>
+    <div>
+      <PopularMenu title='Menu'/>
+    </div>
   )
 }
 
