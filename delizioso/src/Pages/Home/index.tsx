@@ -87,9 +87,24 @@ const Home = () => {
 
       <div className='container'>
         <div className={styles.weAreOpen}>
-
+          <div className={styles.insideWeAreOpen}>
+            <h2 className={styles.openTitle}>we are open from</h2>
+            <p className={styles.openInfo}>Monday-Sunday</p>
+            <div className={styles.openTimeDiv}>
+              <p className={styles.openTimeP}>Launch : Mon-Sun : 11:00am-02:00pm</p>
+              <p className={styles.openTimeP}>Dinner : sunday : 04:00pm-08:00pm</p>
+              <p className={styles.openTimeP}>04:00pm-09:00pm</p>
+            </div>
+            <div className={styles.openButtons}>
+              <button className={styles.openOrderBtn}>Order now</button>
+              <button className={styles.openReservBtn}>Reservation</button>
+            </div>
+          </div>
+          <img className={styles.weAreOpenImg} src="/weAreOpenImg.jpg" alt="Spaghetti" />
         </div>
       </div>
+
+
     </div>
   )
 }
