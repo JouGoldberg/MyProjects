@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './home.module.css'
 import PopularMenu from '../../Components/PopularMenu'
 import { chef } from '../../Data'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 
 const Home = () => {
+  useEffect(() => {
+    document.title = 'Delizioso | Home'
+  }, [])
+
+  const chefLength: number = chef.length
+  const [end, setEnd] = useState<number>(3)
+  const hideBtn: boolean = end >= chefLength ? true : false
+
   return (
     <div className={styles.home}>
       <div className="container">
@@ -69,19 +79,19 @@ const Home = () => {
       <div className={styles.chef}>
         <div className="container">
           <h2 className={styles.chefTitle}>Our greatest chef</h2>
-
           <div className={styles.cooks}>
             {
-              chef.map(({ image, name, job }, i) => {
+              chef.slice(0, end).map(({ image, name, job, bgColor }, i) => {
                 return <div className={styles.chefCard} key={i}>
-                  <img className={styles.chefImage} src={image} alt="Chef" />
+                  <img style={{ backgroundColor: bgColor }} className={styles.chefImage} src={image} alt="Chef" />
                   <p className={styles.chefName}>{name}</p>
                   <p className={styles.chefJob}>{job}</p>
                 </div>
               })
             }
           </div>
-          <button className={styles.chefBtn}>View all</button>
+          <button onClick={() => setEnd(pre => pre + 3)} className={`${hideBtn ? styles.hideBtn : ''} ${styles.chefBtn}`}>View all</button>
+          <button onClick={() => setEnd(3)} className={`${!hideBtn ? styles.hideBtn : ''} ${styles.chefHideBtn}`}><FontAwesomeIcon icon={faChevronUp} /></button>
         </div>
       </div>
 

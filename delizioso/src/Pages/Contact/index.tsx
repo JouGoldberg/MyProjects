@@ -1,21 +1,50 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from './contact.module.css'
+import { contactForm } from '../../Interfaces'
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = 'Delizioso | Contact'
+  }, [])
+
+  const [firstName, setFirstName] = useState<string>('')
+  const [lastName, setLastName] = useState<string>('')
+  const [email, setEmail] = useState<string>('')
+  const [subject, setSubject] = useState<string>('')
+  const [message, setMessage] = useState<string>('')
+
+  const handleSubmit = () : void => {
+    const formObj: contactForm = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      subject: subject,
+      message: message,
+    }
+
+    setFirstName('')
+    setLastName('')
+    setEmail('')
+    setSubject('')
+    setMessage('')
+
+    console.log(formObj);
+  }
+
   return (
     <div>
       <div className="container">
         <h1 className={styles.title}>Contact Us</h1>
         <p className={styles.info}>We love hearing from our customers. Feel free to share your experience or ask any <br /> questions you may have.</p>
         <form className={styles.contactForm}>
-          <input className={styles.formInput} type="text" placeholder='First name' />
-          <input className={styles.formInput} type="text" placeholder='Last name' />
-          <input className={styles.formInput} type="text" placeholder='Email address' />
-          <input className={styles.formInput} type="text" placeholder='Subject' />
-          <textarea placeholder='Message'></textarea>
+          <input value={firstName} onChange={(e) => setFirstName(e.target.value)} className={styles.formInput} type="text" placeholder='First name' />
+          <input value={lastName} onChange={(e) => setLastName(e.target.value)} className={styles.formInput} type="text" placeholder='Last name' />
+          <input value={email} onChange={(e) => setEmail(e.target.value)} className={styles.formInput} type="text" placeholder='Email address' />
+          <input value={subject} onChange={(e) => setSubject(e.target.value)} className={styles.formInput} type="text" placeholder='Subject' />
+          <textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder='Message'></textarea>
         </form>
         <div className={styles.formSubmitDiv}>
-          <button className={styles.formBtn}>Submit</button>
+          <button onClick={handleSubmit} className={styles.formBtn}>Submit</button>
         </div>
       </div>
       <div className={styles.contactFoot}>

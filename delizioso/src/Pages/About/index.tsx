@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './about.module.css'
 
 const About = () => {
+    useEffect(() => {
+      document.title = 'Delizioso | About us'
+    },[])
   return (
     <div className={styles.about}>
       <div className={styles.aboutHead}>

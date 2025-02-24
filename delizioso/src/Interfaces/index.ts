@@ -8,6 +8,7 @@ export interface IMenuItem {
 type TMenuItem = IMenuItem[]
 
 export interface IPopularMenu {
+    breakfast: TMenuItem;
     dinner: TMenuItem;
     lunch: TMenuItem;
     dessert: TMenuItem;
@@ -15,7 +16,16 @@ export interface IPopularMenu {
 }
 
 export interface Ichef {
-    name: string,
-    image: string,
-    job: string
+    name: string;
+    image: string;
+    job: string;
+    bgColor: string;
+}
+
+export interface contactForm {
+    firstName: string;
+    lastName: string;
+    email: string;
+    subject: string;
+    message: string;
 }

@@ -1,9 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './login.module.css'
 import { Link, useNavigate } from 'react-router-dom'
 
 const Login = () => {
+  useEffect(() => {
+    document.title = 'Delizioso | Login'
+  }, [])
+
   const navigate = useNavigate()
+
+  const [email, setEmail] = useState<string>('')
+  const [password, setPassword] = useState<string>('')
+
+  const handleSubmit = (e: React.FormEvent): void => {
+    e.preventDefault()
+
+    const formObj = {
+      email,
+      password,
+    }
+
+    setEmail('')
+    setPassword('')
+
+    console.log(formObj);
+  }
+
   return (
     <div className={styles.login}>
       <div className={styles.insideLogin}>
@@ -11,10 +33,10 @@ const Login = () => {
           <div className={styles.insideLeft}>
             <h1 className={styles.loginTitle}>Login</h1>
             <p className={styles.loginInfo}>Don't have an account? <span onClick={() => navigate('/register')} className={styles.signLink}>Sign up</span></p>
-            <form onSubmit={(e) => e.preventDefault()} className={styles.loginForm}>
-              <input className={styles.loginInput} type="email" placeholder='Email address' />
+            <form onSubmit={(e) => handleSubmit(e)} className={styles.loginForm}>
+              <input value={email} onChange={(e) => setEmail(e.target.value)} className={styles.loginInput} type="email" placeholder='Email address' />
               <br />
-              <input className={styles.loginInput} type="password" placeholder='Password' />
+              <input value={password} onChange={(e) => setPassword(e.target.value)} className={styles.loginInput} type="password" placeholder='Password' />
               <div className={styles.rememberDiv}>
                 <div className={styles.rememberCheckbox}>
                   <input type='checkbox' />

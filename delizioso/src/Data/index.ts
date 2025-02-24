@@ -1,7 +1,58 @@
 import { Ichef, IPopularMenu } from "../Interfaces";
 
+export const menuTabs: string[] = ['Breakfast', 'Lunch', 'Dinner', 'Dessert', 'Drink']
 
 export const popularMenu: IPopularMenu = {
+    breakfast : [
+        {
+            image: '/breakfast1.png',
+            name: 'breakfast',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
+            price: '15',
+        },
+        {
+            image: '/breakfast2.png',
+            name: 'breakfast',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
+            price: '15',
+        },
+        {
+            image: '/breakfast3.png',
+            name: 'breakfast',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
+            price: '15',
+        },
+        {
+            image: '/breakfast4.png',
+            name: 'breakfast',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
+            price: '15',
+        },
+        {
+            image: '/breakfast5.png',
+            name: 'breakfast',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
+            price: '15',
+        },
+        {
+            image: '/breakfast6.png',
+            name: 'breakfast',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
+            price: '15',
+        },
+        {
+            image: '/breakfast7.png',
+            name: 'breakfast',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
+            price: '15',
+        },
+        {
+            image: '/breakfast8.png',
+            name: 'breakfast',
+            desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas consequat mi eget auctor aliquam, diam. ',
+            price: '15',
+        },
+    ],
     dinner: [
         {
             image: '/restaurantSpaghetti.png',
@@ -498,16 +549,31 @@ export const chef: Ichef[] = [
         name: 'Betran Komar',
         image: '/chef1.png',
         job: 'Head Chef',
+        bgColor:'rgb(27, 22, 29, 0.2)',
     },
     {
         name: 'Ferry Sauwi',
         image: '/chef2.png',
         job: 'Chef',
+        bgColor:'rgb(255, 138, 0, 0.2)',
     },
     {
         name: 'Isvan Dracho',
         image: '/chef3.png',
         job: 'Chef',
+        bgColor:'rgb(157, 101, 66, 0.2)',
     },
+    {
+        name: 'David Brown',
+        image: '/chef4.png',
+        job: 'Chef',
+        bgColor:'rgb(170, 108, 0 ,0.2)',
+    },
+    {
+        name: 'Daniel Walker',
+        image: '/chef5.png',
+        job: 'Chef',
+        bgColor:'rgb(130, 148, 123, 0.2)',
+    },    
 ]
 
